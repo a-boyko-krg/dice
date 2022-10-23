@@ -1,0 +1,61 @@
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+[class*="square"] {
+   width: 100px;
+   height: 100px;
+   margin: 10px;
+   padding: 10px;
+   background-color: lightgray;
+   border-radius: 15px;
+   display: flex;
+}
+
+.circle {
+   width: 20px;
+   height: 20px;
+   margin: 3px;
+   background-color: #000000;
+   border-radius: 50%;
+}
+
+.column,
+.center {
+   display: flex;
+}
+
+.square-1 {
+   justify-content: center;
+}
+
+.square-1,
+.square-5 .center {
+   align-items: center;
+}
+
+.square-2,
+.square-4,
+.square-5,
+.square-6,
+.column {
+   justify-content: space-between;
+}
+
+.square-2 .circle:nth-child(2),
+.square-3 .circle:nth-child(3) {
+   align-self: flex-end;
+}
+
+.square-3 .circle:nth-child(2) {
+   align-self: center;
+}
+
+.square-4 .column,
+.square-5 .column,
+.square-6 .column {
+   flex-direction: column;
+}
